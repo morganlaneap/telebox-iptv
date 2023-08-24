@@ -1,0 +1,23 @@
+version: '3.8'
+name: telebox
+services:
+  server:
+    build:
+      context: .
+      dockerfile: server.Dockerfile
+    ports:
+      - "6500:80"
+    volumes:
+      - C:\Data\Telebox.db:/app/Telebox.db:rw
+      - C:\Users\morga\Downloads\recordings:/app/recordings:rw
+    environment:
+      - SqliteFilePath=/app/Telebox.db
+  ui:
+    build:
+      context: .
+      dockerfile: ui.Dockerfile
+    ports:
+      - "6501:80"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=http://localhost:6500

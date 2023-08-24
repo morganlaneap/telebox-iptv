@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Synker</Company>
+    <Authors>Heni Fazzani</Authors>
+    <Description>Xtream Api c# client</Description>
+    <RepositoryUrl>https://github.com/Fazzani/Xtream.Client</RepositoryUrl>
+    <PackageTags>xtream</PackageTags>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Shouldly" Version="4.2.1" />
+    <PackageReference Update="Microsoft.NETCore.App" Version="2.2.8" />
+  </ItemGroup>
+
+</Project>
